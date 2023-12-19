@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Matrix Effect</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: monospace;
+      background-color: black;
+    }
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="matrixCanvas"></canvas>
+  
+  <script>
+    const canvas = document.getElementById('matrixCanvas');
+    const ctx = canvas.getContext('2d');
+
+    // Defina o tamanho do canvas para preencher a tela
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    // Lista de caracteres para a matriz
+    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()';
+    const charactersArr = characters.split('');
+
+    const fontSize = 16;
+    const columns = canvas.width / fontSize;
+
+    // Array para armazenar a posição de queda dos caracteres
+    const drops = [];
+    for (let i = 0; i < columns; i++) {
+      drops[i] = 1;
+    }
+
+    function draw() {
+      // Preencher o fundo com um fundo preto transparente para criar o efeito de rastro
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Definir a cor dos caracteres
+      ctx.fillStyle = '#0F0'; // Cor verde
+
+      // Definir a fonte e o tamanho do caractere
+      ctx.font = fontSize + 'px monospace';
+
+      // Loop através das colunas
+      for (let i = 0; i < drops.length; i++) {
+        const text = charactersArr[Math.floor(Math.random() * characters.length)];
+        // Desenhar o caractere na posição x e y
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        // Incrementar a posição de queda e reiniciar se ultrapassar a altura do canvas
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+        drops[i]++;
+      }
+    }
+
+    // Chamada da função de animação
+    function animate() {
+      requestAnimationFrame(animate);
+      draw();
+    }
+
+    // Iniciar a animação
+    animate();
+
+    // Redimensionar o canvas quando a janela for redimensionada
+    window.addEventListener('resize', function() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      columns = canvas.width / fontSize;
+      drops.length = columns;
+    });
+
+    function reset () {
+      drops.length = 0;
+      for (let i = 0; i < columns; i++) {
+        drops[i] = 1;
+      }
+
+      function draw() {
+        // Preencher o fundo com um fundo preto transparente para criar o efeito de rastro
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        // Definir a cor dos caracteres
+        ctx.fillStyle = '#0F0'; // Cor verde
+
+        // Definir a fonte e o tamanho do caractere
+        ctx.font = fontSize + 'px monospace';
+
+        // Loop através das colunas
+        for (let i = 0; i < drops.length; i++) {
+          const text = charactersArr[Math.floor(Math.random() * characters.length)];
+          // Desenhar o caractere na posição x e y
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+          // Incrementar a posição de queda e reiniciar se ultrapassar a altura do canvas
+          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+            drops[i] = 0;
+          }
+          drops[i]++;
+        }
+      }
+
+      // Chamada da função de animação 
+
+      function animate() {
+        requestAnimationFrame(animate);
+        draw();
+      }
+
+      // Iniciar a animação 
+      animate();
+
+      // Redimensionar o canvas quando a janela for redimensionada
+      window.addEventListener('resize', function() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        columns = canvas.width / fontSize;
+        drops.length = columns;
+      });
+
+      window.addEventListener('click', function() {
+        reset();
+      }); 
+
+    }
+
+    window.addEventListener('click', function() {
+      reset();
+    });
+
+
+    
+
+
+  </script>
+</body>
+</html>
