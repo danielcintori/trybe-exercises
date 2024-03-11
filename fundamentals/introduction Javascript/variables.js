@@ -67,21 +67,54 @@
 // > Maior
 // <= Menor igual
 
-const age = 87;
+// const age = 87;
 
-if(age >= 18) {
-    console.log ('Maior de idade');
+// if(age >= 18) {
+//     console.log ('Maior de idade');
+// }else{
+//     console.log('Menor de idade');
+// }
+
+// const personAge = 11;
+// let canVote;
+
+// if(personAge >= 16){
+//     canVote = 'Pode votar!';
+// }else{
+//     canVote = 'Não pode votar!';
+// }
+
+// console.log(canVote)
+
+// const personAge = 17;
+// const canVote = personAge > 16 ? 'Pode votar!' : 'Não pode votar!';
+
+// console.log(canVote);
+
+let grade = Math.floor(Math.random() * 100) + 1;
+console.log(grade);
+
+if ( grade > 80) {
+    console.log('Parabéns, você faz parte do grupo de pessoas aprovadas!');
+} else if ( grade < 80 && grade > 60) {
+    console.log('Você está na nossa lista de espera.');
 }else{
-    console.log('Menor de idade');
+    console.log('Infelizmente, você reprovou.');
 }
 
-const personAge = 17;
-let canVote;
+const food = 'bread';
+const drink = 'coffee';
 
-if(personAge >= 16){
-    canVote = 'Pode votar!';
+if(drink === 'coffee' && food === 'bread'){
+    console.log('Obrigado!');
 }else{
-    canVote = 'Não pode votar!';
+    console.log('Erraram meu pedido.');
 }
 
-console.log(canVote)
+let carrot = true;
+let milk = true;
+let rice = true;
+let bean = true;
+
+let shoppingList = carrot && milk && rice && bean;
+console.log(shoppingList);
