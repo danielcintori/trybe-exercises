@@ -118,3 +118,18 @@ let bean = true;
 
 let shoppingList = carrot && milk && rice && bean;
 console.log(shoppingList);
+
+let currentHour = Math.floor(Math.random() * 24) + 1;
+let message;
+console.log(currentHour);
+if (currentHour > 22) {
+    console.log('Não deveríamos comer nada, é hora de dormir');
+} else if (currentHour > 18 && currentHour < 22) {
+    console.log('Rango da noite, vamos jantar')
+} else if(currentHour >=14 && currentHour < 18){
+    console.log('Vamos fazer um bolo para o café da tarde?');
+} else if(currentHour >= 11 && currentHour < 14){
+ console.log('Hora do almoço');
+} else if (currentHour >= 4 && currentHour <=11){
+    console.log('Hmm, cheiro de café recém passdo');
+};
