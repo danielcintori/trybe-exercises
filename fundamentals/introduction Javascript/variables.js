@@ -134,12 +134,50 @@
 //     console.log('Hmm, cheiro de café recém passdo');
 // };
 
-const food = 'bread';
-const drink= "coffee";
+// const food = 'bread';
+// const drink= "coffee";
 
-if(drink === 'caffee' && food === 'bread') {
-    console.log('Thanks!');
-} else{
-    console.log("It's not my order")
+// if(drink === 'caffee' && food === 'bread') {
+//     console.log('Thanks!');
+// } else{
+//     console.log("It's not my order")
+// }
+
+// console.log(10 + 5 * 5);
+
+// console.log(!(2+2) === 4);
+
+// let squirtle = "Segundo melhor pokemon";
+
+// console.log(!42);
+// console.log(!0);
+
+let num1 = Math.floor(Math.random() * 10) + 1;
+let num2 = Math.floor(Math.random() * 10) + 1;
+let num3 = Math.floor(Math.random() * 10) + 1;
+
+
+// console.log(`${num1} + ${num2} é igual a ${num1 + num2}`);
+// console.log(`${num1} - ${num2} é igual a ${num1 - num2}`);
+// console.log(`${num1} * ${num2} é igual a ${num1 * num2}`);
+// console.log(`${num1} / ${num2} é igual a ${num1 / num2}`);
+// console.log(`${num1} % ${num2} é igual a ${num1 % num2}`);
+
+
+// if(num1 > num2){
+//     return console.log(`O número ${num1} é maior que ${num2}`);
+// }else{
+//     return console.log(`O número ${num2} é maior que ${num1}`);
+// }
+
+// num1 > num2 ? console.log(`O número ${num1} é maior que ${num2}`) : console.log(`O número ${num2} é maior que ${num1}`) ;
+
+if (num1 > num2 && num1 > num2) {
+    return console.log(`O número ${num1} é maior que ${num2} e que ${num3}`);
+}else if(num2 > num1 && num2 > num3){
+    return console.log(`O número ${num2} é maior que ${num1} e que ${num3}`);
+}else if(num3 > num1 && num3 > num2){
+    return console.log(`O número ${num3} é maior que ${num1} e que ${num2}`);
+}else{
+    return console.log('Existem números iguais');
 }
-
