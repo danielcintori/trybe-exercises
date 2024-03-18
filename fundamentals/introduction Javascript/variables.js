@@ -91,45 +91,55 @@
 
 // console.log(canVote);
 
-let grade = Math.floor(Math.random() * 100) + 1;
-console.log(grade);
+// let grade = Math.floor(Math.random() * 100) + 1;
+// console.log(grade);
 
-if ( grade > 80) {
-    console.log('Parabéns, você faz parte do grupo de pessoas aprovadas!');
-} else if ( grade < 80 && grade > 60) {
-    console.log('Você está na nossa lista de espera.');
-}else{
-    console.log('Infelizmente, você reprovou.');
-}
+// if ( grade > 80) {
+//     console.log('Parabéns, você faz parte do grupo de pessoas aprovadas!');
+// } else if ( grade < 80 && grade > 60) {
+//     console.log('Você está na nossa lista de espera.');
+// }else{
+//     console.log('Infelizmente, você reprovou.');
+// }
+
+// const food = 'bread';
+// const drink = 'coffee';
+
+// if(drink === 'coffee' && food === 'bread'){
+//     console.log('Obrigado!');
+// }else{
+//     console.log('Erraram meu pedido.');
+// }
+
+// let carrot = true;
+// let milk = true;
+// let rice = true;
+// let bean = true;
+
+// let shoppingList = carrot && milk && rice && bean;
+// console.log(shoppingList);
+
+// let currentHour = Math.floor(Math.random() * 24) + 1;
+// let message;
+// console.log(currentHour);
+// if (currentHour > 22) {
+//     console.log('Não deveríamos comer nada, é hora de dormir');
+// } else if (currentHour > 18 && currentHour < 22) {
+//     console.log('Rango da noite, vamos jantar')
+// } else if(currentHour >=14 && currentHour < 18){
+//     console.log('Vamos fazer um bolo para o café da tarde?');
+// } else if(currentHour >= 11 && currentHour < 14){
+//  console.log('Hora do almoço');
+// } else if (currentHour >= 4 && currentHour <=11){
+//     console.log('Hmm, cheiro de café recém passdo');
+// };
 
 const food = 'bread';
-const drink = 'coffee';
+const drink= "coffee";
 
-if(drink === 'coffee' && food === 'bread'){
-    console.log('Obrigado!');
-}else{
-    console.log('Erraram meu pedido.');
+if(drink === 'caffee' && food === 'bread') {
+    console.log('Thanks!');
+} else{
+    console.log("It's not my order")
 }
 
-let carrot = true;
-let milk = true;
-let rice = true;
-let bean = true;
-
-let shoppingList = carrot && milk && rice && bean;
-console.log(shoppingList);
-
-let currentHour = Math.floor(Math.random() * 24) + 1;
-let message;
-console.log(currentHour);
-if (currentHour > 22) {
-    console.log('Não deveríamos comer nada, é hora de dormir');
-} else if (currentHour > 18 && currentHour < 22) {
-    console.log('Rango da noite, vamos jantar')
-} else if(currentHour >=14 && currentHour < 18){
-    console.log('Vamos fazer um bolo para o café da tarde?');
-} else if(currentHour >= 11 && currentHour < 14){
- console.log('Hora do almoço');
-} else if (currentHour >= 4 && currentHour <=11){
-    console.log('Hmm, cheiro de café recém passdo');
-};
