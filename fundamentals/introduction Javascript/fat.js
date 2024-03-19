@@ -156,38 +156,40 @@
 // }
 
 
-const squareDraw = (number) => {
-    const line = '* '.repeat(number)
-    for (let i = 0; i < number; i+= 1) {          
-           console.log(line);
-    }
-   }
+// const squareDraw = (number) => {
+//     const line = '* '.repeat(number)
+//     for (let i = 0; i < number; i+= 1) {          
+//            console.log(line);
+//     }
+//    }
 
-const squareSize = 2;
-squareDraw(squareSize);
+// const squareSize = 2;
+// squareDraw(squareSize);
 
-const triangleDraw = (base) => {
-    for (let linha = 1; linha <= base; linha++) {
-        let linhaAsteriscos = '';
-        for (let coluna = 1; coluna <= linha; coluna++) {
-            linhaAsteriscos += '* ';
-        }
-        console.log(linhaAsteriscos);
-    }
-}
+// const triangleDraw = (base) => {
+//     for (let linha = 1; linha <= base; linha++) {
+//         let linhaAsteriscos = '';
+//         for (let coluna = 1; coluna <= linha; coluna++) {
+//             linhaAsteriscos += '* ';
+//         }
+//         console.log(linhaAsteriscos);
+//     }
+// }
 
-const baseTriangulo = 5;
-triangleDraw(baseTriangulo);
+// const baseTriangulo = 5;
+// triangleDraw(baseTriangulo);
 
-const invertedTriangleDraw = (base) => {
-    for (let linha = base; linha >= 1; linha--) {
-        let linhaAsteriscos = '';
-        for (let coluna = 1; coluna <= linha; coluna++) {
-            linhaAsteriscos += '* ';
-        }
-        console.log(linhaAsteriscos);
-    }
-}
+// const invertedTriangleDraw = (base) => {
+//     for (let linha = base; linha >= 1; linha--) {
+//         let linhaAsteriscos = '';
+//         for (let coluna = 1; coluna <= linha; coluna++) {
+//             linhaAsteriscos += '* ';
+//         }
+//         console.log(linhaAsteriscos);
+//     }
+// }
 
-const baseInvertedTriangulo = 5;
-invertedTriangleDraw(baseInvertedTriangulo);
+// const baseInvertedTriangulo = 5;
+// invertedTriangleDraw(baseInvertedTriangulo);
+
+
