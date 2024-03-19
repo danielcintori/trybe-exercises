@@ -94,7 +94,100 @@
 //     }    
 // }
 // fatorial
-let fat = 3;
-let result;
-for (let i = 0; i < fat; i += 1) {
+
+// function calcularFatorial(numbero){
+//     if (numero === 0 || numero === 1){
+//         return 1;
+//     }else{
+//         let fatorial = 1;
+//         for(let i = 2; i<= numero; i++){
+//             fatorial *= i
+//         }
+//         return fatorial;
+//     }
+// }
+
+// let numero = 10;
+// let resultado = calcularFatorial(numero);
+// console.log(`O fatoraial de ${numero} é igual a ${resultado}`);
+
+
+// function invertePalavra(str){
+// console.log(str);
+// let separada = str.split('');
+// console.log(separada);
+// let invertida = separada.reverse();
+// console.log(invertida);
+// let agrupada = invertida.join('');
+// console.log(agrupada);
+// return agrupada;
+// }
+
+// function invertePalavra(str){
+//     const letrasInvertidas = str.split('').reverse().join('');
+//     return letrasInvertidas
+// }
+
+
+// const invertePalavra = (palavra) => {
+//     if(typeof palavra != 'string'){
+//         throw new Error('Você só pode enviar Strings');
+//     }else{
+//         const palavraInvertida = palavra.split('').reverse().join('');
+//         return palavraInvertida;
+//     }
+// }
+
+
+// let palavraAInverter = 'Daniel';
+// let palavraInvertida = invertePalavra(palavraAInverter);
+// console.log(`O inverso da palavra ${palavraAInverter} é ${palavraInvertida}`);
+
+
+
+// const squareDraw = (number) => {
+//  for (let i = 0; i < number; i+= 1) {
+//         let line = '';
+//         for (let j = 0; j < number; j+= 1) {
+//             line += '* ';            
+//         }
+//         console.log(line);
+//  }
+// }
+
+
+const squareDraw = (number) => {
+    const line = '* '.repeat(number)
+    for (let i = 0; i < number; i+= 1) {          
+           console.log(line);
+    }
+   }
+
+const squareSize = 2;
+squareDraw(squareSize);
+
+const triangleDraw = (base) => {
+    for (let linha = 1; linha <= base; linha++) {
+        let linhaAsteriscos = '';
+        for (let coluna = 1; coluna <= linha; coluna++) {
+            linhaAsteriscos += '* ';
+        }
+        console.log(linhaAsteriscos);
+    }
 }
+
+const baseTriangulo = 5;
+triangleDraw(baseTriangulo);
+
+const invertedTriangleDraw = (base) => {
+    for (let linha = base; linha >= 1; linha--) {
+        let linhaAsteriscos = '';
+        for (let coluna = 1; coluna <= linha; coluna++) {
+            linhaAsteriscos += '* ';
+        }
+        console.log(linhaAsteriscos);
+    }
+}
+
+const baseInvertedTriangulo = 5;
+invertedTriangleDraw(baseInvertedTriangulo);
