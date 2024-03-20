@@ -108,3 +108,8 @@ addProperty(customer, 'userGithub', 'robertinhodev');
 addProperty(customer, 'linkedIn', 'RS');
 
 console.log(customer);
+
+customer['naMao'] = 'Espero que entre no valor do objeto';
+
+console.log(customer);
+
